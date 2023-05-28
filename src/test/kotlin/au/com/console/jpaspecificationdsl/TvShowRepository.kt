@@ -4,10 +4,10 @@ import org.springframework.data.jpa.domain.Specification
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor
 import org.springframework.data.repository.CrudRepository
 import org.springframework.stereotype.Repository
-import javax.persistence.Entity
-import javax.persistence.GeneratedValue
-import javax.persistence.Id
-import javax.persistence.OneToMany
+import jakarta.persistence.Entity
+import jakarta.persistence.GeneratedValue
+import jakarta.persistence.Id
+import jakarta.persistence.OneToMany
 
 @Repository
 interface TvShowRepository : CrudRepository<TvShow, Int>, JpaSpecificationExecutor<TvShow>
@@ -21,7 +21,7 @@ data class TvShow(
     val synopsis: String = "",
     val availableOnNetflix: Boolean = false,
     val releaseDate: String? = null,
-    @OneToMany(cascade = kotlin.arrayOf(javax.persistence.CascadeType.ALL))
+    @OneToMany(cascade = [jakarta.persistence.CascadeType.ALL])
     val starRatings: Set<StarRating> = emptySet()
 )
 

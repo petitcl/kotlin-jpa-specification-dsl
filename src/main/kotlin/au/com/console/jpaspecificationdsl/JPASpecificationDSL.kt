@@ -1,7 +1,7 @@
 package au.com.console.jpaspecificationdsl
 
 import org.springframework.data.jpa.domain.Specification
-import javax.persistence.criteria.*
+import jakarta.persistence.criteria.*
 import kotlin.reflect.KProperty1
 
 // Helper to allow joining to Properties
